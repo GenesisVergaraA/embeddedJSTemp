@@ -1,0 +1,57 @@
+GET http://localhost:3000/
+
+###
+
+GET http://localhost:3000/products
+
+###
+
+GET http://localhost:3000/products/1
+
+###
+GET http://localhost:3000/products/100
+
+###
+POST http://localhost:3000/products HTTP/1.1
+Content-Type: application/json
+
+{
+    "nom": "tercer",
+    "preu": 3,
+    "categoria": "alimentació"
+}
+
+###
+POST http://localhost:3000/products HTTP/1.1
+Content-Type: application/json
+
+{
+    "nom": "quart",
+    "preu": 4,
+    "categoria": "roba"
+}
+
+###
+
+PUT http://localhost:3000/products/3
+Content-Type: application/json
+
+{
+    "nom": "tercer2",
+    "preu": 1000
+}
+
+###
+
+PUT http://localhost:3000/products/100
+Content-Type: application/json
+
+{
+    "nom": "cent",
+    "preu": 100,
+    "categoria": "alimentació" 
+}
+
+###
+
+DELETE http://localhost:3000/products/3

@@ -1,0 +1,22 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "nom": "primer",
+            "preu": 4,
+            "categoria": "elèctronica"
+        },
+        {
+            "id": 2,
+            "nom": "segon2",
+            "preu": 2,
+            "categoria": "alimentació"
+        },
+        {
+            "id": 3,
+            "nom": "tercer",
+            "preu": 3,
+            "categoria": "alimentació"
+        }
+    ]
+}
