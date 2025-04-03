@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width= device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+
+<body>
+    <main>
+        <section>
+            <h2>Producte <%= product.nom %></h2>
+            <div class="product-detail">
+                <div class="product-info">
+                    <p><strong>ID:</strong> <%= product.id %></p>
+                    <p><strong>Nom:</strong> <%= product.nom %></p>
+                    <p><strong>Categoria:</strong> <%= product.categoria %></p>
+                    <p><strong>Preu:</strong> €<%= product.preu.toFixed(2) %></p>
+                </div>
+                <a href="/products" class="btn-back">Tornar a la llista</a>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

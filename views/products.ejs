@@ -19,14 +19,16 @@
         <section>
             <h2>Llista de productes</h2>
             <ul class="product-list">
-                <% data.products.forEach(product => {%>
+                <% data.products.forEach(product => { %>
                     <li class="product-item">
-                        <strong><%=product.nom%> </strong>
-                        <span>Categoria: <%=product.categoria%></span>
-                        <span>Preu € <%=product.preu%></span>
+                        <a href="/products/<%= product.id %>">
+                            <strong><%= product.nom %></strong>
+                            <span>Categoria: <%= product.categoria %></span>
+                            <span>Preu € <%= product.preu %></span>
+                        </a>
                     </li>
-            <% })%>
-        </ul>
+                <% }); %>
+            </ul>
         </section>
     </main>
 </body>
