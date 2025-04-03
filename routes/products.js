@@ -1,12 +1,8 @@
-import express from "express";
+import express, { Router } from "express";
 import fs from "fs";
 
 
-
 const router = express.Router();
-
-
-
 // Funciones compartidas
 const readData = () => {
     try {
@@ -28,7 +24,7 @@ const writeData = (data) => {
 };
 
     // Lista de productos
-    router.get('/products', (req, res) => {
+    router.get('/', (req, res) => {
         const user = { name: "Génesis" };
         const htmlMessage = `
             <p>Aquest és un text <strong>amb estil</strong> i un enllaç:</p>
@@ -109,3 +105,4 @@ const writeData = (data) => {
         }
     });
 
+export default router

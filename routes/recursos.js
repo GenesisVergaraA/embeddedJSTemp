@@ -25,7 +25,7 @@ const writeData = (data) => {
 };
 
     // Lista completa de recursos
-    router.get('/recursos', (req, res, next) => {
+    router.get('/', (req, res, next) => {
         try {
             const data = readData();
             res.render("recursos", {data});
@@ -105,3 +105,6 @@ const writeData = (data) => {
             next(error);
         }
     });
+
+
+export default router 
