@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es" class="recursos">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalles Recurso</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/recursos.css">
+</head>
+<body class="recursos">
+    <header class="recursos-header">
+        <h1>Detalles del Recurso</h1>
+    </header>
+    <main>
+        <section class="detalle-recurso">
+                <h2><%= recurs.tipo %></h2>
+                    <p><strong>ID:</strong> <%= recurs.id %></p>
+                    <p><strong>Tipo:</strong> <%= recurs.tipo %></p>
+                    <p><strong>Estado:</strong> <%= recurs.estado %></p>
+            <div class="recurso-links-detalles">
+                <a href="/recursos/<%= recurs.id %>/edit" class="btn-detalle">Editar</a>
+                <a href="/recursos" class="btn-editar">Volver</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -23,11 +23,11 @@ app.get('/', (req, res) => {
     res.render("index");
 });
 
-// Configuración de rutas con las funciones compartidas
+// Configuración de rutas
 app.use('/products', productRoutes);
 app.use('/recursos', recursosRoutes);
 
 
 app.listen(3000, () => {
-    console.log("Servidor escuchando en puerto 3000");
+    console.log("Server listening in port 3000");
 });

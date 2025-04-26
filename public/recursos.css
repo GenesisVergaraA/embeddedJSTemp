@@ -1,0 +1,164 @@
+body.recursos {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+
+}
+
+header.recursos-header {
+    background: #4a90e2;
+    color: white;
+    padding: 3rem 4rem;
+    text-align: center;
+}
+
+header.recursos-header h1 {
+
+    margin: 0 0 40px;
+    font-size: 1.8rem;
+}
+
+header.recursos-header nav a {
+    color: white;
+    text-decoration: none;
+    background: black;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+header.recursos-header nav a:hover {
+    background: #2d68a8;
+}
+
+main.recursos-main {
+    padding: 2rem;
+}
+
+section.recursos-lista ul {
+    margin: 0 0 0 25%;
+    width: 50%;
+    list-style: none;
+    padding: 0;
+}
+
+.recurso-item {
+    background: white;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recurso-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.recurso-info strong {
+    font-size: 1.2rem;
+    color: #4a90e2;
+}
+
+
+.recurso-links a {
+    margin: 0.5rem 0 0;
+    text-decoration: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.btn-detalle {
+    background: #7ed6df;
+    color: #2d3436;
+}
+
+.btn-detalle:hover {
+    background: #63cdda;
+}
+
+.btn-editar {
+    background: #ffeaa7;
+    color: #2d3436;
+}
+
+button[type=submit] {
+    margin: 0.5rem 0 0;
+    text-decoration: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    border-style: none;
+}
+
+.btn-editar:hover {
+    background: #f6e58d;
+}
+
+
+/* DETALLES DE RECURSO */
+.detalle-recurso {
+    max-width: 500px;
+    height: 300px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ecf0f1;
+    border-left: 5px solid #3498db;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.detalle-recurso h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 1.5rem;
+}
+
+.recurso-links-detalles {
+    margin: 3rem 0 0 0;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+
+.recurso-links-detalles a {
+    margin: 0.5rem 0 0;
+    text-decoration: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+/* EDITAR RECURSO */
+.form-editar-recurso {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ecf0f1;
+    border: 2px solid #3498db;
+}
+
+.form-group.recursos {
+    margin-bottom: 1.5rem;
+}
+
+.form-group.recursos label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.form-group.recursos select,
+.form-group.recursos input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #bdc3c7;
+    background-color: white;
+}

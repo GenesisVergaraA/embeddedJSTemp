@@ -1,34 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" class="productos">
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-    <meta name="viewport" content="width= device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <title>Productos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/products.css">
 </head>
 
-<body>
-    <header>
-        <h1>Gestió de Productes per <%=user.name%>!</h1>
-        <h2>
-            <%- htmlMessage %>
-        </h2>
+<body class="productos">
+    <header class="productos">
+        <h1>Catálogo de Productos</h1>
+        <h2><a href="/">Home</h2></a>
+
     </header>
     <main>
-        <section>
-            <h2>Llista de productes</h2>
-            <ul class="product-list">
-                <% data.products.forEach(product => { %>
-                    <li class="product-item">
-                        <a href="/products/<%= product.id %>">
-                            <strong><%= product.nom %></strong>
-                            <span>Categoria: <%= product.categoria %></span>
-                            <span>Preu € <%= product.preu %></span>
-                        </a>
-                    </li>
-                <% }); %>
-            </ul>
+        <section class="productos-section">
+            <table class="productos">
+                <thead class="productos">
+                    <th class="productos">Nombre</th>
+                    <th>Categoría</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </thead>
+                <tbody>
+                    <% data.products.forEach(product=> { %>
+                        <tr>
+                            <td class="productos">
+                                <%= product.nom %>
+                            </td>
+                            <td>
+                                <%= product.categoria %>
+                            </td>
+                            <td>
+                                <%= product.preu %> €
+                            </td>
+                            <td class="actions">
+                                <a href="/products/<%= product.id %>" class="btn btn-primary productos">Detalles</a>
+                                <a href="/products/<%= product.id %>/edit" class="btn btn-primary productos">Editar</a>
+                            </td>
+                        </tr>
+                        <% }); %>
+                </tbody>
+            </table>
         </section>
     </main>
 </body>

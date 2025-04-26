@@ -1,192 +1,42 @@
-/* Estilos generales */
-:root {
-    --primary-color: #4361ee;
-    --secondary-color: #3f37c9;
-    --accent-color: #4cc9f0;
-    --light-color: #f8f9fa;
-    --dark-color: #212529;
-    --success-color: #4bb543;
-    --border-radius: 8px;
-    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: var(--dark-color);
+    font-family: 'Segoe UI', sans-serif;
     background-color: #f5f7fa;
-    padding: 0;
     margin: 0;
-}
-
-/* Header styles */
-header {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    padding: 2rem 1rem;
-    text-align: center;
-    margin-bottom: 2rem;
-    box-shadow: var(--box-shadow);
-    background: linear-gradient(135deg, #4361ee, #3f37c9);
-}
-
-header h1 {
-    font-size: 2.2rem;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
-}
-
-header h2 {
-    font-size: 1.3rem;
-    font-weight: 400;
-    opacity: 0.9;
-}
-
-/* Main content */
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-}
-
-section {
-    background-color: white;
-    border-radius: var(--border-radius);
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: var(--box-shadow);
-}
-
-section h2 {
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--accent-color);
-    font-size: 1.8rem;
-}
-
-/* Product list styles */
-.product-list {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
-}
-
-.product-item {
-    background-color: white;
-    border: 1px solid #e9ecef;
-    border-radius: var(--border-radius);
-    padding: 1.5rem;
-    transition: var(--transition);
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    align-items: center;
+    min-height: 100vh;
 }
-
-.product-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    border-color: var(--accent-color);
+header {
+    background: linear-gradient(135deg, #4361ee, #3a0ca3);
+    color: white;
+    width: 100%;
+    padding: 2rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
 }
-
-.product-item strong {
-    font-size: 1.2rem;
-    color: var(--secondary-color);
-    font-weight: 600;
+.btn-container {
+    margin: 100px 0 0 0;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-
-.product-item span {
-    display: block;
-    color: #495057;
-    font-size: 0.95rem;
+.btn-home {
+    padding: 1.2rem 2.4rem;
+    background: #4cc9f0;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    min-width: 200px;
 }
-
-.product-item span:last-child {
-    color: var(--primary-color);
-    font-weight: 500;
-    margin-top: auto;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    header h2 {
-        font-size: 1.1rem;
-    }
-
-    .product-list {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    section {
-        padding: 1.5rem 1rem;
-    }
-
-    section h2 {
-        font-size: 1.5rem;
-    }
-}
-
-/* Animaciones */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.product-item {
-    animation: fadeIn 0.5s ease forwards;
-    opacity: 0;
-}
-
-.product-item:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.product-item:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.product-item:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.product-item:nth-child(4) {
-    animation-delay: 0.4s;
-}
-
-.product-item:nth-child(5) {
-    animation-delay: 0.5s;
-}
-
-.product-item:nth-child(6) {
-    animation-delay: 0.6s;
-}
-
-.product-item:nth-child(7) {
-    animation-delay: 0.7s;
-}
-
-.product-item:nth-child(8) {
-    animation-delay: 0.8s;
+.btn-home:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    background: #4895ef;
 }

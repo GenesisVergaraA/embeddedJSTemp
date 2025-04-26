@@ -1,28 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es" class="productos">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-    <meta name="viewport" content="width= device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <title>Detalles Producto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/products.css">
 </head>
-
-<body>
+<body class="productos">
+    <header class="productos">
+        <h1>Detalles del Producto</h1>
+        <h2><a href="index"></a>Home</h2>
+    </header>
     <main>
-        <section>
-            <h2>Producte <%= product.nom %></h2>
-            <div class="product-detail">
-                <div class="product-info">
+        <section class="detalle-producto">
+            <h2><%= product.nom %></h2>
+            <div class="detalle-content">
+                <div class="detalle-row">
                     <p><strong>ID:</strong> <%= product.id %></p>
-                    <p><strong>Nom:</strong> <%= product.nom %></p>
-                    <p><strong>Categoria:</strong> <%= product.categoria %></p>
-                    <p><strong>Preu:</strong> €<%= product.preu.toFixed(2) %></p>
                 </div>
-                <a href="/products" class="btn-back">Tornar a la llista</a>
+                <div class="detalle-row">
+                    <p><strong>Nombre:</strong> <%= product.nom %></p>
+                </div>
+                <div class="detalle-row">
+                    <p><strong>Categoría:</strong> <%= product.categoria %></p>
+                </div>
+                <div class="detalle-row">
+                    <p><strong>Precio:</strong> <%= product.preu %> €</p>
+                </div>
+            </div>
+            <div class="actions">
+                <a href="/products/<%= product.id %>/edit" class="btn btn-primary productos">Editar</a>
+                <a href="/products" class="btn btn-secondary productos">Volver</a>
             </div>
         </section>
     </main>
 </body>
-
 </html>

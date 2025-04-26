@@ -1,31 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es" class="recursos">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-    <meta name="viewport" content="width= device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <title>Gestión de Recursos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/recursos.css">
 </head>
-
-<body>
-    <header>
-        <h1>Gestió de Recursos</h1>
-       
+<body class="recursos">
+    <header class="recursos-header">
+        <h1>Gestión de Recursos</h1>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
     </header>
-    <main>
-        <section>
-            <h2>Llista de recursos</h2>
-            <ul class="product-list">
-                <% data.recursos.forEach(recurs => {%>
-                    <li class="product-item">
-                        <strong><%=recurs.tipo%> </strong>
-                        <span>Estado: <%=recurs.estado%></span>
-                    </li>
-            <% })%>
-        </ul>
+    <main class="recursos-main">
+        <section class="recursos-lista">
+            <ul>
+                <% data.recursos.forEach(recurs => { %>
+                <li class="recurso-item">
+                    <div class="recurso-info">
+                        <strong><%= recurs.tipo %></strong>
+                        <span>Estado: <%= recurs.estado %></span>
+                    </div>
+                    <div class="recurso-links">
+                        <a href="/recursos/<%= recurs.id %>" class="btn-detalle">Detalles</a>
+                        <a href="/recursos/<%= recurs.id %>/edit" class="btn-editar">Editar</a>
+                    </div>
+                </li>
+                <% }); %>
+            </ul>
         </section>
     </main>
 </body>
-
 </html>

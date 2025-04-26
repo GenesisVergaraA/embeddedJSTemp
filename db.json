@@ -1,34 +1,34 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "nom": "primer",
-            "preu": 4,
-            "categoria": "elèctronica"
-        },
-        {
-            "id": 2,
-            "nom": "segon2",
-            "preu": 2,
-            "categoria": "alimentació"
-        },
-        {
-            "id": 3,
-            "nom": "tercer",
-            "preu": 3,
-            "categoria": "alimentació"
-        }
-    ],
-    "recursos": [
-        {
-            "id": 1,
-            "tipo": "Sala",
-            "estado": "Disponible"
-        },
-        {
-            "id": 2,
-            "tipo": "Equipament",
-            "estado": "Ocupat"
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "nom": "primer",
+      "preu": "5",
+      "categoria": "electrònica"
+    },
+    {
+      "id": 2,
+      "nom": "segon2",
+      "preu": "4",
+      "categoria": "alimentació"
+    },
+    {
+      "id": 3,
+      "nom": "tercer",
+      "preu": 3,
+      "categoria": "alimentació"
+    }
+  ],
+  "recursos": [
+    {
+      "id": 1,
+      "tipo": "equipamiento",
+      "estado": "Ocupado"
+    },
+    {
+      "id": 2,
+      "tipo": "Equipament",
+      "estado": "Ocupat"
+    }
+  ]
 }
